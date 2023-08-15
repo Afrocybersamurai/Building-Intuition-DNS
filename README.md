@@ -24,7 +24,20 @@ In this lab we will be experimenting with DNS. This lab will help us have a bett
 <p>
 </p>
 <p>
-First we will be inspecting DNS A-Records on the server. A records are hostname to IP address mappings. We are going to create an A record on DC-1 for "mainframe" and have it point to DC-1's private IP address. If we try to ping mainframe without setting the DNS record it will not work. When we ping "mainframe" Client-1 is checking the DNS cache, checking its local host file and checking the DNS server. To create an A-record go to the AD->Tools->DNS->DC-1->Forward lookup zones->mydomain.com-> right click and create a new A record, title it mainframe. If we go back to the client machine and ping mainframe we will get a reply. 
+
+  ![cloudflare-1111](https://user-images.githubusercontent.com/109401839/213241753-8772baf2-c4fd-4721-827b-c86fb18ae13c.gif)
+
+What is DNS? The Domain Name System (DNS) is the phonebook of the Internet. It basically allows us to convert IP addresses from numbers (8.8.8.8) to readable addresses like (www.google.com). Imagine, when using your smartphone and we ask our built in assistant, "Hey Siri, call USPS nearby" and siri then finds that address, converts it to a number, and connects us to the USPS. 
+
+<h2>Actions and Observations</h2>
+
+![view below](https://user-images.githubusercontent.com/136266716/260770306-8a47962d-12b5-4e84-8e34-bc33937f8919.jpg)
+
+First we will be inspecting DNS A-Records on the server. A records are hostname to IP address mappings. We are going to create an A record on DC-1 for "mainframe" and have it point to DC-1's private IP address. 
+
+If we try to ping mainframe without setting the DNS record it will not work. When we ping "mainframe" Client-1 is checking the DNS cache, checking its local host file and checking the DNS server. To create an A-record go to the AD->Tools->DNS->DC-1->Forward lookup zones->mydomain.com-> right click and create a new A record, title it mainframe. 
+
+If we go back to the client machine and ping mainframe we will get a reply. 
 </p>
 <br />
 
